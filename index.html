@@ -6,10 +6,10 @@
   <title>Karim Mostafa | IT Infrastructure & Systems Engineer</title>
   <meta name="description" content="Executive CV & Portfolio of Karim Mostafa - IT Infrastructure & Systems Engineer, AWS Certified, Linux Administrator, Cisco CCNA.">
   
-  <!-- Google Fonts: Syne (Executive Headings) + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,8 +22,7 @@
       theme: {
         extend: {
           fontFamily: {
-            heading: ['"Syne"', 'sans-serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           },
           colors: {
@@ -46,7 +45,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Ambient Luxury Lighting */
+    /* Ambient Lighting */
     .dark .luxury-ambient {
       background: 
         radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12), transparent 50%),
@@ -54,53 +53,23 @@
         radial-gradient(circle at 10% 80%, rgba(212, 175, 55, 0.05), transparent 45%);
     }
 
-    .light .luxury-ambient {
+    :not(.dark) .luxury-ambient {
       background: 
-        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08), transparent 55%),
-        radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.05), transparent 45%);
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.07), transparent 55%),
+        radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.04), transparent 45%);
     }
 
     /* Metallic Gold Gradients */
-    .gold-gradient-text {
+    .gold-gradient-text-dark {
       background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA771C 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .dark .gold-gradient-badge {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(160, 115, 20, 0.05));
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      color: #F3E5AB;
-    }
-
-    .light .gold-gradient-badge {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(245, 158, 11, 0.08));
-      border: 1px solid rgba(180, 130, 20, 0.3);
-      color: #92400e;
-    }
-
-    /* Glass Cards */
-    .dark .luxury-card {
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-    .dark .luxury-card:hover {
-      border-color: rgba(212, 175, 55, 0.3);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.08);
-    }
-
-    .light .luxury-card {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
-    }
-    .light .luxury-card:hover {
-      border-color: rgba(212, 175, 55, 0.4);
-      box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.12);
+    .gold-gradient-text-light {
+      background: linear-gradient(135deg, #854d0e 0%, #b45309 60%, #997F24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* Toast Notification */
@@ -123,7 +92,7 @@
       .no-print {
         display: none !important;
       }
-      .luxury-card {
+      .print-clean {
         background: white !important;
         border: 1px solid #e2e8f0 !important;
         box-shadow: none !important;
@@ -132,53 +101,53 @@
   </style>
 </head>
 
-<body class="bg-[#090D16] text-slate-100 font-sans antialiased selection:bg-[#D4AF37] selection:text-slate-950 transition-colors duration-300">
+<body class="bg-slate-50 dark:bg-[#090D16] text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-[#D4AF37] selection:text-slate-950 transition-colors duration-300">
 
   <!-- Ambient Light Container -->
   <div class="fixed inset-0 luxury-ambient pointer-events-none z-0"></div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 luxury-card border-b border-slate-800/80 transition-all no-print">
+  <header class="sticky top-0 z-50 bg-white/85 dark:bg-[#0B0F19]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-all no-print">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
       <!-- Brand Logo / Monogram -->
       <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] via-[#AA771C] to-[#8C6239] p-[1px] shadow-lg shadow-amber-900/20 group-hover:scale-105 transition-transform">
-          <div class="w-full h-full bg-[#0B0F19] rounded-[11px] flex items-center justify-center font-heading font-extrabold text-[#F3E5AB] text-sm tracking-wider">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] via-[#AA771C] to-[#8C6239] p-[1px] shadow-sm group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-white dark:bg-[#0B0F19] rounded-[11px] flex items-center justify-center font-bold text-amber-700 dark:text-[#F3E5AB] text-sm tracking-wider">
             KM
           </div>
         </div>
         <div>
-          <span class="font-heading font-bold tracking-tight text-slate-100 group-hover:text-[#D4AF37] transition-colors block text-sm sm:text-base leading-none">Karim Mostafa</span>
-          <span class="text-[11px] text-[#D4AF37] font-mono tracking-wide">Infrastructure & Systems</span>
+          <span class="font-bold tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-[#D4AF37] transition-colors block text-sm sm:text-base leading-none">Karim Mostafa</span>
+          <span class="text-[11px] text-amber-600 dark:text-[#D4AF37] font-mono tracking-wide">Infrastructure & Systems</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-400">
-        <a href="#about" class="hover:text-[#D4AF37] transition-colors">About</a>
-        <a href="#skills" class="hover:text-[#D4AF37] transition-colors">Skills</a>
-        <a href="#experience" class="hover:text-[#D4AF37] transition-colors">Experience</a>
-        <a href="#certifications" class="hover:text-[#D4AF37] transition-colors">Certifications</a>
-        <a href="#education" class="hover:text-[#D4AF37] transition-colors">Education</a>
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-400">
+        <a href="#about" class="hover:text-amber-600 dark:hover:text-[#D4AF37] transition-colors">About</a>
+        <a href="#skills" class="hover:text-amber-600 dark:hover:text-[#D4AF37] transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-amber-600 dark:hover:text-[#D4AF37] transition-colors">Experience</a>
+        <a href="#certifications" class="hover:text-amber-600 dark:hover:text-[#D4AF37] transition-colors">Certifications</a>
+        <a href="#education" class="hover:text-amber-600 dark:hover:text-[#D4AF37] transition-colors">Education</a>
       </nav>
 
       <!-- Action Buttons + Theme Switcher -->
       <div class="flex items-center gap-2.5">
         
         <!-- Light / Dark Mode Toggle Button -->
-        <button id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme" class="w-9 h-9 rounded-xl luxury-card flex items-center justify-center text-slate-300 hover:text-[#D4AF37] transition-all border border-slate-700/60 hover:scale-105">
+        <button id="themeToggle" onclick="toggleTheme()" aria-label="Toggle Theme" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 flex items-center justify-center transition-all border border-slate-200 dark:border-slate-700 hover:scale-105">
           <i id="themeIcon" class="fa-solid fa-sun text-sm text-[#D4AF37]"></i>
         </button>
 
         <!-- Print / PDF Button -->
-        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 transition">
-          <i class="fa-solid fa-print text-[#D4AF37]"></i>
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 transition">
+          <i class="fa-solid fa-print text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Print / PDF</span>
         </button>
 
         <!-- Contact CTA -->
-        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 transition hover:brightness-110 shadow-md shadow-amber-900/20">
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl text-xs font-bold bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 transition hover:brightness-110 shadow-sm">
           <i class="fa-solid fa-envelope"></i>
           <span>Contact</span>
         </a>
@@ -193,73 +162,69 @@
       
       <!-- Status Pills -->
       <div class="flex flex-wrap items-center justify-center gap-2.5">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full gold-gradient-badge text-xs font-semibold">
-          <i class="fa-brands fa-aws text-xs"></i>
-          AWS Certified Cloud Practitioner
-        </span>
-        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           Available for Opportunities
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/60 border border-slate-700/60 text-slate-400 text-xs">
-          <i class="fa-solid fa-shield-halved text-[#D4AF37]"></i>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/70 dark:bg-slate-800/60 border border-slate-300 dark:border-slate-700/60 text-slate-700 dark:text-slate-400 text-xs font-medium">
+          <i class="fa-solid fa-shield-halved text-amber-600 dark:text-[#D4AF37]"></i>
           Military Status: Exempted
         </span>
       </div>
 
       <!-- Main Headline -->
       <div class="space-y-3 pt-2">
-        <h1 class="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight text-white leading-tight">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-950 dark:text-white leading-tight">
           Karim Mostafa
         </h1>
-        <p class="text-xl sm:text-2xl font-heading font-semibold gold-gradient-text tracking-wide">
+        <p class="text-xl sm:text-2xl font-semibold gold-gradient-text-light dark:gold-gradient-text-dark tracking-normal">
           IT Infrastructure & Systems Engineer
         </p>
       </div>
 
       <!-- Professional Summary -->
-      <p id="about" class="text-slate-300 leading-relaxed text-sm sm:text-base max-w-2xl mx-auto font-normal">
+      <p id="about" class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base max-w-2xl mx-auto font-normal">
         Results-driven Telecommunications and Systems Engineer with 2+ years of enterprise NOC experience at Huawei GNOC. Proven expertise in real-time network monitoring, incident management, and L1 troubleshooting across multi-vendor mission-critical environments. AWS Certified Cloud Practitioner with a solid foundation in Linux administration, CCNA enterprise networking, and IT infrastructure operations.
       </p>
 
       <!-- Contact Quick Info Bar with 1-Click Copy -->
-      <div class="flex flex-wrap items-center justify-center gap-2.5 pt-2 text-xs sm:text-sm text-slate-300">
+      <div class="flex flex-wrap items-center justify-center gap-2.5 pt-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
         
         <!-- Copy Email -->
-        <button onclick="copyToClipboard('Karemallithy1@gmail.com', 'Email copied to clipboard!')" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition group">
-          <i class="fa-regular fa-envelope text-[#D4AF37]"></i>
+        <button onclick="copyToClipboard('Karemallithy1@gmail.com', 'Email copied to clipboard!')" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 hover:text-amber-700 dark:hover:text-[#D4AF37] shadow-sm transition group">
+          <i class="fa-regular fa-envelope text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Karemallithy1@gmail.com</span>
-          <i class="fa-regular fa-copy text-slate-500 group-hover:text-[#D4AF37] text-xs ml-1"></i>
+          <i class="fa-regular fa-copy text-slate-400 group-hover:text-amber-600 dark:group-hover:text-[#D4AF37] text-xs ml-1"></i>
         </button>
 
         <!-- Phone Call / Copy -->
-        <a href="tel:+201096539108" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition">
-          <i class="fa-solid fa-phone text-[#D4AF37]"></i>
+        <a href="tel:+201096539108" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 hover:text-amber-700 dark:hover:text-[#D4AF37] shadow-sm transition">
+          <i class="fa-solid fa-phone text-amber-600 dark:text-[#D4AF37]"></i>
           <span>+20 109 653 9108</span>
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/karem-allithy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-[#D4AF37]/50 hover:text-[#D4AF37] transition">
-          <i class="fa-brands fa-linkedin text-[#D4AF37]"></i>
+        <a href="https://linkedin.com/in/karem-allithy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 hover:text-amber-700 dark:hover:text-[#D4AF37] shadow-sm transition">
+          <i class="fa-brands fa-linkedin text-amber-600 dark:text-[#D4AF37]"></i>
           <span>linkedin.com/in/karem-allithy</span>
         </a>
 
         <!-- Location -->
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-400">
-          <i class="fa-solid fa-location-dot text-[#D4AF37]"></i>
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 shadow-sm">
+          <i class="fa-solid fa-location-dot text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Cairo, Egypt</span>
         </span>
       </div>
 
       <!-- Action Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-3.5 pt-4 no-print">
-        <a href="mailto:Karemallithy1@gmail.com?subject=Job%20Opportunity%20-%20Karim%20Mostafa" class="px-7 py-3 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 font-heading font-bold text-sm shadow-xl shadow-amber-900/20 hover:brightness-110 flex items-center gap-2.5 transition transform hover:-translate-y-0.5">
+        <a href="mailto:Karemallithy1@gmail.com?subject=Job%20Opportunity%20-%20Karim%20Mostafa" class="px-7 py-3 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 font-bold text-sm shadow-md hover:brightness-110 flex items-center gap-2.5 transition transform hover:-translate-y-0.5">
           <i class="fa-solid fa-paper-plane text-xs"></i>
           <span>Get In Touch</span>
         </a>
 
-        <a href="https://linkedin.com/in/karem-allithy" target="_blank" class="px-6 py-3 rounded-xl luxury-card text-slate-200 font-semibold text-sm hover:text-[#D4AF37] flex items-center gap-2.5 transition">
-          <i class="fa-brands fa-linkedin text-[#D4AF37]"></i>
+        <a href="https://linkedin.com/in/karem-allithy" target="_blank" class="px-6 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/60 text-slate-800 dark:text-slate-200 font-semibold text-sm hover:text-amber-700 dark:hover:text-[#D4AF37] shadow-sm flex items-center gap-2.5 transition">
+          <i class="fa-brands fa-linkedin text-amber-600 dark:text-[#D4AF37]"></i>
           <span>LinkedIn Profile</span>
         </a>
       </div>
@@ -267,91 +232,91 @@
 
     <!-- CORE COMPETENCIES / TECHNICAL SKILLS -->
     <section id="skills" class="space-y-6 scroll-mt-20">
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-        <h2 class="text-xl sm:text-2xl font-heading font-bold text-white flex items-center gap-3">
-          <i class="fa-solid fa-microchip text-[#D4AF37]"></i>
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+          <i class="fa-solid fa-microchip text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Technical Skills & Domains</span>
         </h2>
-        <span class="text-xs font-mono text-slate-400 hidden sm:inline">Enterprise Tooling</span>
+        <span class="text-xs font-mono text-slate-500 dark:text-slate-400 hidden sm:inline">Enterprise Tooling</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
         <!-- Cloud & Virtualization -->
-        <div class="luxury-card rounded-2xl p-6 border-t-2 border-t-[#D4AF37]">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm border-t-2 border-t-amber-500">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-lg">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-[#D4AF37] text-lg">
               <i class="fa-solid fa-cloud"></i>
             </div>
             <div>
-              <h3 class="text-base font-heading font-bold text-white">Cloud & Virtualization</h3>
-              <p class="text-xs text-slate-400">AWS Infrastructure & Architecture</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Cloud & Virtualization</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">AWS Infrastructure & Architecture</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">AWS Services (EC2, S3, IAM, VPC)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Cloud Security</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Cloud Architecture Fundamentals</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">AWS Services (EC2, S3, IAM, VPC)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Cloud Security</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Cloud Architecture Fundamentals</span>
           </div>
         </div>
 
         <!-- Operating Systems -->
-        <div class="luxury-card rounded-2xl p-6 border-t-2 border-t-emerald-500">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm border-t-2 border-t-emerald-500">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-lg">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg">
               <i class="fa-brands fa-linux"></i>
             </div>
             <div>
-              <h3 class="text-base font-heading font-bold text-white">Operating Systems & Linux</h3>
-              <p class="text-xs text-slate-400">Server Administration & Automation</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Operating Systems & Linux</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Server Administration & Automation</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Linux Administration</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Command-Line Interface (CLI)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Shell Scripting / Bash Basics</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">User & Process Management</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Linux Administration</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Command-Line Interface (CLI)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Shell Scripting / Bash Basics</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">User & Process Management</span>
           </div>
         </div>
 
         <!-- Networking -->
-        <div class="luxury-card rounded-2xl p-6 border-t-2 border-t-sky-500">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm border-t-2 border-t-sky-500">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-lg">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-600 dark:text-sky-400 text-lg">
               <i class="fa-solid fa-network-wired"></i>
             </div>
             <div>
-              <h3 class="text-base font-heading font-bold text-white">Networking (CCNA)</h3>
-              <p class="text-xs text-slate-400">Protocols, Routing & Security</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Networking (CCNA)</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Protocols, Routing & Security</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">CCNA Enterprise Curriculum</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">TCP/IP Protocol Suite</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Subnetting (IPv4 & IPv6)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Routing & Switching</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Network Security & Triage</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">CCNA Enterprise Curriculum</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">TCP/IP Protocol Suite</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Subnetting (IPv4 & IPv6)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Routing & Switching</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Network Security & Triage</span>
           </div>
         </div>
 
         <!-- Infrastructure & Operations -->
-        <div class="luxury-card rounded-2xl p-6 border-t-2 border-t-amber-600">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm border-t-2 border-t-amber-600">
           <div class="flex items-center gap-3 mb-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-600/20 flex items-center justify-center text-amber-500 text-lg">
+            <div class="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-600/20 flex items-center justify-center text-amber-600 dark:text-amber-500 text-lg">
               <i class="fa-solid fa-server"></i>
             </div>
             <div>
-              <h3 class="text-base font-heading font-bold text-white">Infrastructure & Operations</h3>
-              <p class="text-xs text-slate-400">Enterprise NOC & Incident Management</p>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Infrastructure & Operations</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Enterprise NOC & Incident Management</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Enterprise NOC Operations</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Fault Management</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Incident Escalation</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">SLA Compliance</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">Multi-Vendor (Huawei, Ericsson, Nokia)</span>
-            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 text-xs text-slate-200 font-medium">NMS (U2000, NetEco)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Enterprise NOC Operations</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Fault Management</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Incident Escalation</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">SLA Compliance</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">Multi-Vendor (Huawei, Ericsson, Nokia)</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 text-xs text-slate-700 dark:text-slate-200 font-medium">NMS (U2000, NetEco)</span>
           </div>
         </div>
 
@@ -360,54 +325,54 @@
 
     <!-- PROFESSIONAL EXPERIENCE (DETAILED TIMELINE) -->
     <section id="experience" class="space-y-6 scroll-mt-20">
-      <div class="border-b border-slate-800 pb-3">
-        <h2 class="text-xl sm:text-2xl font-heading font-bold text-white flex items-center gap-3">
-          <i class="fa-solid fa-briefcase text-[#D4AF37]"></i>
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+          <i class="fa-solid fa-briefcase text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Professional Experience</span>
         </h2>
       </div>
 
-      <div class="relative border-l-2 border-slate-800 ml-3 sm:ml-5 space-y-8 pl-5 sm:pl-7">
+      <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 sm:ml-5 space-y-8 pl-5 sm:pl-7">
         
         <!-- Experience 1: L1 RAN Engineer -->
         <div class="relative group">
-          <div class="absolute -left-[27px] sm:-left-[35px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#D4AF37] border-4 border-[#090D16] group-hover:scale-125 transition-transform"></div>
+          <div class="absolute -left-[27px] sm:-left-[35px] top-1.5 w-3.5 h-3.5 rounded-full bg-amber-500 border-4 border-slate-50 dark:border-[#090D16] group-hover:scale-125 transition-transform"></div>
 
-          <div class="luxury-card rounded-2xl p-6 sm:p-7 transition-all">
+          <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-white/10 shadow-sm transition-all">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
               <div>
-                <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 mb-1.5">
+                <span class="inline-block px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-500/10 text-amber-700 dark:text-[#D4AF37] border border-amber-500/30 mb-1.5">
                   Promoted Role
                 </span>
-                <h3 class="text-lg sm:text-xl font-heading font-bold text-white">L1 RAN Engineer</h3>
-                <p class="text-[#D4AF37] font-medium text-sm flex items-center gap-1.5">
-                  <i class="fa-solid fa-building text-slate-500 text-xs"></i> Huawei GNOC
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">L1 RAN Engineer</h3>
+                <p class="text-amber-700 dark:text-[#D4AF37] font-medium text-sm flex items-center gap-1.5">
+                  <i class="fa-solid fa-building text-slate-400 text-xs"></i> Huawei GNOC
                 </p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 self-start sm:self-auto">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 self-start sm:self-auto">
                 <i class="fa-regular fa-calendar"></i> Feb 2026 – Sep 2026
               </span>
             </div>
 
-            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed pt-2">
+            <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed pt-2">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Promoted from Front Office Engineer to spearhead L1 fault isolation and critical incident escalation across multi-vendor telecom sites (Huawei, Ericsson, Nokia).</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Executed proactive network surveillance and incident management using enterprise NMS tools, successfully processing 100+ daily network alarms and sustaining 99% SLA compliance.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Performed root-cause troubleshooting for mission-critical outages, collaborating with field engineering and back-office teams to drastically reduce Mean Time to Resolution (MTTR).</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Analyzed recurring fault patterns and network KPIs to deliver actionable preventive-maintenance reports, directly boosting site availability and network stability.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Represented technical operations in customer-facing review meetings, ensuring alignment between engineering workflows and stringent client SLA deliverables.</span>
               </li>
             </ul>
@@ -416,32 +381,32 @@
 
         <!-- Experience 2: Front Office Engineer -->
         <div class="relative group">
-          <div class="absolute -left-[27px] sm:-left-[35px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-700 border-4 border-[#090D16] group-hover:scale-125 transition-transform"></div>
+          <div class="absolute -left-[27px] sm:-left-[35px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-700 border-4 border-slate-50 dark:border-[#090D16] group-hover:scale-125 transition-transform"></div>
 
-          <div class="luxury-card rounded-2xl p-6 sm:p-7 transition-all">
+          <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-white/10 shadow-sm transition-all">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
               <div>
-                <h3 class="text-lg sm:text-xl font-heading font-bold text-white">Front Office (FO) Engineer</h3>
-                <p class="text-[#D4AF37] font-medium text-sm flex items-center gap-1.5">
-                  <i class="fa-solid fa-building text-slate-500 text-xs"></i> Huawei GNOC
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Front Office (FO) Engineer</h3>
+                <p class="text-amber-700 dark:text-[#D4AF37] font-medium text-sm flex items-center gap-1.5">
+                  <i class="fa-solid fa-building text-slate-400 text-xs"></i> Huawei GNOC
                 </p>
               </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 self-start sm:self-auto">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 self-start sm:self-auto">
                 <i class="fa-regular fa-calendar"></i> May 2024 – Feb 2026
               </span>
             </div>
 
-            <ul class="space-y-2.5 text-slate-300 text-sm leading-relaxed pt-2">
+            <ul class="space-y-2.5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed pt-2">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Delivered 24/7 real-time surveillance across multi-vendor infrastructure utilizing Huawei U2000 and NetEco NMS platforms.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Managed end-to-end incident lifecycles, rapidly escalating high-priority network events to L2/L3 engineering teams within strict SLA limits.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-angle-right text-[#D4AF37] mt-1 flex-shrink-0"></i>
+                <i class="fa-solid fa-angle-right text-amber-600 dark:text-[#D4AF37] mt-1 flex-shrink-0"></i>
                 <span>Correlated historical incident logs with live alarm feeds to detect recurring anomalies, accelerating initial response times and improving uptime.</span>
               </li>
             </ul>
@@ -453,9 +418,9 @@
 
     <!-- CERTIFICATIONS & PROFESSIONAL TRAINING -->
     <section id="certifications" class="space-y-6 scroll-mt-20">
-      <div class="border-b border-slate-800 pb-3">
-        <h2 class="text-xl sm:text-2xl font-heading font-bold text-white flex items-center gap-3">
-          <i class="fa-solid fa-award text-[#D4AF37]"></i>
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+          <i class="fa-solid fa-award text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Certifications & Professional Training</span>
         </h2>
       </div>
@@ -463,85 +428,85 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
         <!-- AWS Cert -->
-        <div class="luxury-card rounded-2xl p-6 group">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3.5">
-              <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-2xl">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-[#D4AF37] text-2xl">
                 <i class="fa-brands fa-aws"></i>
               </div>
               <div>
-                <h3 class="font-heading font-bold text-white text-base">AWS Certified Cloud Practitioner</h3>
-                <p class="text-xs text-[#D4AF37]">Amazon Web Services (AWS)</p>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">AWS Certified Cloud Practitioner</h3>
+                <p class="text-xs text-amber-700 dark:text-[#D4AF37]">Amazon Web Services (AWS)</p>
               </div>
             </div>
-            <span class="px-2.5 py-1 rounded-lg bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] font-mono text-xs font-bold">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-[#D4AF37] font-mono text-xs font-bold">
               2026
             </span>
           </div>
-          <p class="text-xs text-slate-300 mt-4 leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
             Official AWS certification covering cloud architecture, core compute/storage/network services (EC2, S3, IAM, VPC), security, and compliance.
           </p>
         </div>
 
         <!-- Cisco CCNA -->
-        <div class="luxury-card rounded-2xl p-6 group">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3.5">
-              <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-xl">
+              <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-600 dark:text-sky-400 text-xl">
                 <i class="fa-solid fa-network-wired"></i>
               </div>
               <div>
-                <h3 class="font-heading font-bold text-white text-base">Cisco CCNA 200-301 Enterprise Networking</h3>
-                <p class="text-xs text-slate-400">Course & Self-Study Refresh</p>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Cisco CCNA 200-301 Enterprise Networking</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Course & Self-Study Refresh</p>
               </div>
             </div>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs font-semibold">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold">
               2024 (Refreshed 2026)
             </span>
           </div>
-          <p class="text-xs text-slate-300 mt-4 leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
             Completed core enterprise networking curriculum in 2024 and actively refreshed in 2026; covers IP routing & switching, subnetting, network security, and infrastructure services.
           </p>
         </div>
 
         <!-- Linux Admin -->
-        <div class="luxury-card rounded-2xl p-6 group">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3.5">
-              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-xl">
                 <i class="fa-brands fa-linux"></i>
               </div>
               <div>
-                <h3 class="font-heading font-bold text-white text-base">Linux System Administration</h3>
-                <p class="text-xs text-emerald-400">TananyAcademy</p>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">Linux System Administration</h3>
+                <p class="text-xs text-emerald-700 dark:text-emerald-400">TananyAcademy</p>
               </div>
             </div>
-            <span class="px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-800 text-emerald-400 font-mono text-xs font-semibold">
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-mono text-xs font-semibold">
               2026
             </span>
           </div>
-          <p class="text-xs text-slate-300 mt-4 leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
             Hands-on Linux server administration, user/process management, bash scripting, file systems, permissions, and CLI automation.
           </p>
         </div>
 
         <!-- IBM Data Analyst -->
-        <div class="luxury-card rounded-2xl p-6 group">
+        <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 border border-slate-200/90 dark:border-white/10 shadow-sm">
           <div class="flex items-start justify-between gap-3">
             <div class="flex items-center gap-3.5">
-              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl">
                 <i class="fa-solid fa-chart-pie"></i>
               </div>
               <div>
-                <h3 class="font-heading font-bold text-white text-base">IBM Data Analyst</h3>
-                <p class="text-xs text-indigo-400">IBM</p>
+                <h3 class="font-bold text-slate-900 dark:text-white text-base">IBM Data Analyst</h3>
+                <p class="text-xs text-indigo-700 dark:text-indigo-400">IBM</p>
               </div>
             </div>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 font-mono text-xs font-semibold">
+            <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-semibold">
               2024
             </span>
           </div>
-          <p class="text-xs text-slate-300 mt-4 leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
             Data analysis and visualization using Python, SQL, and Excel; applied to operational metrics reporting, log analysis, and incident trends.
           </p>
         </div>
@@ -551,75 +516,75 @@
 
     <!-- EDUCATION & RESEARCH -->
     <section id="education" class="space-y-6 scroll-mt-20">
-      <div class="border-b border-slate-800 pb-3">
-        <h2 class="text-xl sm:text-2xl font-heading font-bold text-white flex items-center gap-3">
-          <i class="fa-solid fa-graduation-cap text-[#D4AF37]"></i>
+      <div class="border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-3">
+          <i class="fa-solid fa-graduation-cap text-amber-600 dark:text-[#D4AF37]"></i>
           <span>Education & Research</span>
         </h2>
       </div>
 
-      <div class="luxury-card rounded-2xl p-6 sm:p-7 space-y-5">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+      <div class="bg-white dark:bg-slate-900/65 rounded-2xl p-6 sm:p-7 border border-slate-200/90 dark:border-white/10 shadow-sm space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
           <div>
-            <h3 class="text-lg font-heading font-bold text-white">Higher Technological Institute (HTI)</h3>
-            <p class="text-[#D4AF37] font-medium text-sm">B.Eng. in Electrical Engineering (Communications & Electronics)</p>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Higher Technological Institute (HTI)</h3>
+            <p class="text-amber-700 dark:text-[#D4AF37] font-medium text-sm">B.Eng. in Electrical Engineering (Communications & Electronics)</p>
           </div>
-          <span class="text-xs font-mono text-slate-300 px-3 py-1 rounded-lg bg-slate-900 border border-slate-800 self-start sm:self-auto">
+          <span class="text-xs font-mono text-slate-600 dark:text-slate-300 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 self-start sm:self-auto">
             Graduated Jan 2024
           </span>
         </div>
 
         <!-- Graduation Project -->
-        <div class="p-5 rounded-xl bg-slate-900/80 border border-slate-800">
+        <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
           <div class="flex items-center justify-between gap-2 mb-2">
-            <span class="text-xs font-heading font-semibold uppercase tracking-wider text-[#D4AF37] flex items-center gap-1.5">
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-700 dark:text-[#D4AF37] flex items-center gap-1.5">
               <i class="fa-solid fa-shield-halved"></i> Graduation Project
             </span>
-            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30">
               Grade: Excellent
             </span>
           </div>
-          <h4 class="text-base font-heading font-bold text-white">Web Attack Detection Using Deep Learning</h4>
-          <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-            Engineered deep learning models to classify and detect web security attacks with <strong class="text-[#F3E5AB]">92% accuracy</strong> on test data (Python, Deep Learning).
+          <h4 class="text-base font-bold text-slate-900 dark:text-white">Web Attack Detection Using Deep Learning</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+            Engineered deep learning models to classify and detect web security attacks with <strong class="text-slate-900 dark:text-[#F3E5AB]">92% accuracy</strong> on test data (Python, Deep Learning).
           </p>
           <div class="flex flex-wrap gap-2 mt-3">
-            <span class="text-xs px-2.5 py-1 rounded-md bg-[#090D16] border border-slate-800 text-slate-400 font-mono">Python</span>
-            <span class="text-xs px-2.5 py-1 rounded-md bg-[#090D16] border border-slate-800 text-slate-400 font-mono">Deep Learning</span>
-            <span class="text-xs px-2.5 py-1 rounded-md bg-[#090D16] border border-slate-800 text-slate-400 font-mono">92% Accuracy</span>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-white dark:bg-[#090D16] border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-mono">Python</span>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-white dark:bg-[#090D16] border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-mono">Deep Learning</span>
+            <span class="text-xs px-2.5 py-1 rounded-md bg-white dark:bg-[#090D16] border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-mono">92% Accuracy</span>
           </div>
         </div>
 
         <!-- Languages & Status -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-language text-[#D4AF37]"></i> Languages
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-language text-amber-600 dark:text-[#D4AF37]"></i> Languages
             </h5>
             <div class="space-y-1.5 text-xs sm:text-sm">
               <div class="flex justify-between items-center">
-                <span class="text-slate-300">Arabic</span>
-                <span class="font-mono text-[#D4AF37] font-semibold">Native</span>
+                <span class="text-slate-700 dark:text-slate-300">Arabic</span>
+                <span class="font-mono text-amber-700 dark:text-[#D4AF37] font-semibold">Native</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-slate-300">English</span>
-                <span class="font-mono text-slate-400">B2 (Upper-Intermediate)</span>
+                <span class="text-slate-700 dark:text-slate-300">English</span>
+                <span class="font-mono text-slate-500 dark:text-slate-400">B2 (Upper-Intermediate)</span>
               </div>
             </div>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
-            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-id-card text-[#D4AF37]"></i> Additional Information
+          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-id-card text-amber-600 dark:text-[#D4AF37]"></i> Additional Information
             </h5>
             <div class="space-y-1.5 text-xs sm:text-sm">
               <div class="flex justify-between items-center">
-                <span class="text-slate-300">Military Service</span>
-                <span class="font-mono text-emerald-400 font-semibold">Exempted</span>
+                <span class="text-slate-700 dark:text-slate-300">Military Service</span>
+                <span class="font-mono text-emerald-700 dark:text-emerald-400 font-semibold">Exempted</span>
               </div>
               <div class="flex justify-between items-center">
-                <span class="text-slate-300">Location</span>
-                <span class="font-mono text-slate-400">Cairo, Egypt</span>
+                <span class="text-slate-700 dark:text-slate-300">Location</span>
+                <span class="font-mono text-slate-500 dark:text-slate-400">Cairo, Egypt</span>
               </div>
             </div>
           </div>
@@ -630,27 +595,27 @@
 
     <!-- CONTACT SECTION -->
     <section id="contact" class="space-y-6 scroll-mt-20 no-print">
-      <div class="luxury-card rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto border border-[#D4AF37]/30 space-y-5 relative overflow-hidden">
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] text-2xl shadow-lg">
+      <div class="bg-white dark:bg-slate-900/70 rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto border border-amber-500/20 dark:border-[#D4AF37]/30 shadow-md space-y-5 relative overflow-hidden">
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-[#D4AF37] text-2xl shadow-sm">
           <i class="fa-solid fa-paper-plane"></i>
         </div>
 
-        <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Let's Connect</h2>
-        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Let's Connect</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed max-w-lg mx-auto">
           Open to discussing roles in IT Infrastructure, Systems Engineering, Cloud Architecture, and Enterprise Operations.
         </p>
 
         <div class="flex flex-wrap justify-center gap-3 pt-2">
-          <a href="mailto:Karemallithy1@gmail.com" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 font-heading font-bold text-xs flex items-center gap-2 transition hover:brightness-110 shadow-md">
+          <a href="mailto:Karemallithy1@gmail.com" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#AA771C] text-slate-950 font-bold text-xs flex items-center gap-2 transition hover:brightness-110 shadow-md">
             <i class="fa-solid fa-envelope"></i>
             Karemallithy1@gmail.com
           </a>
-          <a href="tel:+201096539108" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs flex items-center gap-2 transition">
-            <i class="fa-solid fa-phone text-[#D4AF37]"></i>
+          <a href="tel:+201096539108" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs flex items-center gap-2 transition shadow-sm">
+            <i class="fa-solid fa-phone text-amber-600 dark:text-[#D4AF37]"></i>
             +20 109 653 9108
           </a>
-          <a href="https://linkedin.com/in/karem-allithy" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs flex items-center gap-2 transition">
-            <i class="fa-brands fa-linkedin text-[#D4AF37]"></i>
+          <a href="https://linkedin.com/in/karem-allithy" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-xs flex items-center gap-2 transition shadow-sm">
+            <i class="fa-brands fa-linkedin text-amber-600 dark:text-[#D4AF37]"></i>
             LinkedIn
           </a>
         </div>
@@ -660,64 +625,45 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-800/80 mt-16 py-6 text-center text-xs text-slate-500 no-print">
+  <footer class="border-t border-slate-200 dark:border-slate-800/80 mt-16 py-6 text-center text-xs text-slate-500 no-print">
     <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© 2026 Karim Mostafa. All rights reserved.</p>
-      <p class="font-mono text-[#D4AF37]">IT Infrastructure & Systems Engineer</p>
+      <p class="font-mono text-amber-600 dark:text-[#D4AF37]">IT Infrastructure & Systems Engineer</p>
     </div>
   </footer>
 
   <!-- FLOATING TOAST FEEDBACK -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-slate-100 border border-[#D4AF37]/50 shadow-2xl flex items-center gap-2.5 text-xs font-medium">
-    <i class="fa-solid fa-circle-check text-[#D4AF37]"></i>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-slate-100 dark:bg-slate-800 dark:text-slate-100 border border-amber-500/40 shadow-2xl flex items-center gap-2.5 text-xs font-medium">
+    <i class="fa-solid fa-circle-check text-amber-400"></i>
     <span id="toastMsg">Action completed</span>
   </div>
 
-  <!-- JAVASCRIPT: THEME TOGGLE & INTERACTIVE UTILITIES -->
+  <!-- JAVASCRIPT: CLEAN THEME TOGGLE & PERSISTENCE -->
   <script>
-    // Theme Management with Persistence
-    function initTheme() {
-      const savedTheme = localStorage.getItem('km_theme');
-      const html = document.documentElement;
+    function updateThemeUI(isDark) {
       const icon = document.getElementById('themeIcon');
-
-      if (savedTheme === 'light') {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        document.body.classList.remove('bg-[#090D16]', 'text-slate-100');
-        document.body.classList.add('bg-[#F8FAFC]', 'text-slate-800');
-        icon.className = 'fa-solid fa-moon text-sm text-slate-700';
-      } else {
-        html.classList.remove('light');
-        html.classList.add('dark');
-        document.body.classList.remove('bg-[#F8FAFC]', 'text-slate-800');
-        document.body.classList.add('bg-[#090D16]', 'text-slate-100');
+      if (isDark) {
+        document.documentElement.classList.add('dark');
         icon.className = 'fa-solid fa-sun text-sm text-[#D4AF37]';
+      } else {
+        document.documentElement.classList.remove('dark');
+        icon.className = 'fa-solid fa-moon text-sm text-slate-700';
       }
     }
 
-    function toggleTheme() {
-      const html = document.documentElement;
-      const icon = document.getElementById('themeIcon');
-      const isDark = html.classList.contains('dark');
+    function initTheme() {
+      const savedTheme = localStorage.getItem('km_theme');
+      // Default to dark mode unless explicitly set to light
+      const isDark = savedTheme !== 'light';
+      updateThemeUI(isDark);
+    }
 
-      if (isDark) {
-        html.classList.remove('dark');
-        html.classList.add('light');
-        document.body.classList.remove('bg-[#090D16]', 'text-slate-100');
-        document.body.classList.add('bg-[#F8FAFC]', 'text-slate-800');
-        icon.className = 'fa-solid fa-moon text-sm text-slate-700';
-        localStorage.setItem('km_theme', 'light');
-        showToast('Switched to Light Mode');
-      } else {
-        html.classList.remove('light');
-        html.classList.add('dark');
-        document.body.classList.remove('bg-[#F8FAFC]', 'text-slate-800');
-        document.body.classList.add('bg-[#090D16]', 'text-slate-100');
-        icon.className = 'fa-solid fa-sun text-sm text-[#D4AF37]';
-        localStorage.setItem('km_theme', 'dark');
-        showToast('Switched to Dark Mode');
-      }
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const nextDark = !isDark;
+      updateThemeUI(nextDark);
+      localStorage.setItem('km_theme', nextDark ? 'dark' : 'light');
+      showToast(nextDark ? 'Switched to Dark Mode' : 'Switched to Light Mode');
     }
 
     // 1-Click Clipboard Copy
